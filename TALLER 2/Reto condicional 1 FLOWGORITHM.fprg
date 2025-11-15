@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto condicional 1 FLOWGORITHM"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 02:55:07 PM"/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0xNTswMTo0ODowOCBQTTsyNjUy"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0xNTswMjo1NTowNyBQTTsxOzI3NTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Nombre: Nicolas Sbeastian Garcia Moran&quot;" newline="True"/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="Random(6)"/>
+            <assign variable="dado2" expression="Random(6)"/>
+            <output expression="&quot;El Dado 1 es: &quot; &amp; Dado1" newline="True"/>
+            <output expression="&quot;El Dado 2 es: &quot; &amp; Dado2" newline="True"/>
+            <if expression="Dado1 == Dado2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                    <output expression="Dado1 == Dado2" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                    <output expression="Dado1 == Dado2" newline="True"/>
+                </else>
+            </if>
+            <if expression="Dado1 mod 2 == 0">
+                <then>
+                    <output expression="&quot;Dado 1 es PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dado 1 es IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="Dado2 mod 2 == 0">
+                <then>
+                    <output expression="&quot;Dado 2 es PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dado 2 es IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Muchas Gracias por jugar :D &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
