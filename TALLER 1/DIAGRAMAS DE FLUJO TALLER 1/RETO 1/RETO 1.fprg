@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RETO 1"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 11:25:16 PM"/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMTowNTo1MCBQTTsyNjQy"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMToyNToxNiBQTTsxOzI3NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="resultadoDado" type="Integer" array="False" size=""/>
+            <assign variable="resultadoDado" expression="Random(6) + 1"/>
+            <output expression="&quot;El dado cayo en: &quot; &amp; resultadoDado" newline="True"/>
+            <if expression="resultadoDado Mod 2 == 0">
+                <then>
+                    <output expression="&quot;El n&#250;mero es Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El n&#250;mero es Impar.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

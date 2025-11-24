@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RETO2"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 11:35:43 PM"/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMToyNToyMiBQTTsyNjQz"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMTozNTo0MyBQTTsxOzI3NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numLanzamientos" type="Integer" array="False" size=""/>
+            <declare name="resultadoDado" type="Integer" array="False" size=""/>
+            <declare name="sumaTotal" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Cuantas veces deseas lanzar el dado?&quot;" newline="True"/>
+            <input variable="numLanzamientos"/>
+            <assign variable="sumaTotal" expression="0"/>
+            <for variable="i" start="1" end="numLanzamientos" direction="inc" step="1">
+                <assign variable="resultadoDado" expression="Random(6) + 1"/>
+                <assign variable="sumaTotal" expression="sumaTotal + resultadoDado"/>
+                <output expression="&quot;lanzamiento &quot; &amp; i &amp; &quot;: &quot; &amp; resultadoDado" newline="True"/>
+            </for>
+            <output expression="&quot;FIN de los lanzamientos: La suma total final es: &quot; &amp; sumaTotal &amp; &quot;    &quot; &amp; &quot;Garcias por jugar :D &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
