@@ -1,36 +1,42 @@
 import os
 from random import randint
 
-lives=3
-status=True
-suma=0
+lives = 3
+suma = 0
+wins = 0
+losses = 0
 
 def roll_dice():
-    dice1=randint(1,6)
-    dice2=randint(1,6)
-    return dice1,dice2
+    dice1 = randint(1, 6)
+    dice2 = randint(1, 6)
+    return dice1, dice2
 
-###print(roll_dice())
 while True:
-    key= input('Press any key to roll dices: ')
-    dices=roll_dice()
-    print(f'Dice1:{dices[0]}')
-    print(f'Dice2:{dices[1]}')
-    dices_unidad="".join(map(str,dices))
-    resul_ent=int(dices_unidad)
-    suma+=1
-    if(dices[0]+dices[1])%2==0:
-        lives+=1
+    input('presiona cualquier tecla para lanzar los dados: ')
+    dice1, dice2 = roll_dice()
+    print(f'dado1: {dice1}')
+    print(f'dado2: {dice2}')
+    suma += 1
+
+    if (dice1 + dice2) % 2 == 0:
+        lives = 3
     else:
-        lives-=1
-    if dices[0]==6 and dices[1]==6:
-        print('YOU WIN')
-        print('total de lanzamientos', suma)
-        os.system('pause')
+        lives -= 1
+
+    if dice1 == 6 and dice2 == 6:
+        print('ganaste')
+        print('total de lanzamientos:', suma)
+        wins += 1
         break
 
-    if lives==0:
-        print('GAME OVER')
-        print('total de lanzamientos', suma)
+    if lives == 0:
+        print('game over')
+        print('total de lanzamientos:', suma)
+        losses += 1
         break
-    
+
+print('---------------------------------')
+print('resultados finales')
+print(f'veces que ganaste: {wins}')
+print(f'veces que perdiste: {losses}')
+print('---------------------------------')
