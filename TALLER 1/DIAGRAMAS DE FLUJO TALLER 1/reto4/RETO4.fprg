@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RETO4"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 10:15:29 PM"/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yNDswOTo1Mzo0MyBQTTsyNjU1"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yNDsxMDoxNToyOSBQTTsxOzI3NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado1" type="Integer" array="False" size=""/>
+            <declare name="Dado2" type="Integer" array="False" size=""/>
+            <declare name="Contador" type="Integer" array="False" size=""/>
+            <assign variable="Contador" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="1000000" direction="inc" step="1">
+                <assign variable="Contador" expression="Contador + 1"/>
+                <assign variable="Dado1" expression="Random(6) + 1"/>
+                <assign variable="Dado2" expression="Random(6) + 1"/>
+                <output expression="&quot;Lanzamiento #&quot; &amp; Contador &amp; &quot;: Dados (&quot; &amp; Dado1 &amp; &quot;, &quot; &amp; Dado2 &amp; &quot;)&quot;" newline="True"/>
+                <if expression="(Dado1 = 6) AND (Dado2 = 6)">
+                    <then>
+                        <assign variable="i" expression="1000000"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot; Se logr&#243; el PAR DE SEISES despues de &quot; &amp; Contador &amp; &quot; lanzamientos.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
